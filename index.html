@@ -105,6 +105,7 @@ Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaSc
                     </div>
                     <h3>Simple Web Creation</h3>
                     <p>We create beautiful, responsive websites tailored to your needs. Our simple web creation service is perfect for individuals and small businesses looking to establish their online presence.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-md-6">
@@ -114,6 +115,7 @@ Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaSc
                     </div>
                     <h3>Sleep Call Service</h3>
                     <p>Experience peaceful nights with our unique sleep call service. We offer soothing conversations and relaxation techniques to help you unwind and fall asleep easily.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -242,24 +244,111 @@ Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaSc
   document.addEventListener('DOMContentLoaded', function() {
     // Existing code...
 
-    // Particles.js initialization
-    particlesJS('particles-js', {
-        particles: {
-            number: { value: 80, density: { enable: true, value_area: 800 } },
-            color: { value: "#ffffff" },
-            shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
-            opacity: { value: 0.5, random: false, anim: { enable: false } },
-            size: { value: 3, random: true, anim: { enable: false } },
-            line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
-            move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
-        },
-        interactivity: {
-            detect_on: "canvas",
-            events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
-            modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
-        },
-        retina_detect: true
-    });
+particlesJS('particles-js', {
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": ["#3498db", "#2ecc71", "#9b59b6", "#f1c40f"]
+    },
+    "shape": {
+      "type": ["circle", "triangle", "polygon"],
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      }
+    },
+    "opacity": {
+      "value": 0.6,
+      "random": false,
+      "anim": {
+        "enable": true,
+        "speed": 2,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 8,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 10,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 5,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
 });
   
 </script>
@@ -267,4 +356,4 @@ Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaSc
       
 
 </body>
-</html>
+    </html>
