@@ -599,27 +599,24 @@ body, html {
 }
 
 
-/* ... (previous CSS styles remain the same) ... */
 
-/* Services Section Styles */
+
 .services-section {
-    padding: 100px 0;
-    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
-    text-align: center;
+  padding: 80px 0;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
 }
 
-
-.services-section .section-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
-    color: #1a1a2e;
-    position: relative;
-    text-align: center;
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
 }
 
-.services-section .section-title::after {
-    content: '';
+.section-title::after {
+  content: '';
     position: absolute;
     left: 50%;
         transform: translateX(-50%);
@@ -630,42 +627,104 @@ body, html {
 }
 
 .service-card {
-    background-color: #f8f9fa;
-    border-radius: 15px;
-    padding: 40px;
-    text-align: center;
-    transition: all 0.3s ease;
-    margin-bottom: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .service-icon {
-    font-size: 3rem;
-    color: #3498db;
-    margin-bottom: 20px;
+  font-size: 3rem;
+  color: #3498db;
+  margin-bottom: 20px;
 }
 
 .service-card h3 {
-    font-size: 1.5rem;
-    color: #1a1a2e;
-    margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 15px;
 }
 
 .service-card p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.service-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #3498db;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.service-link i {
+  margin-left: 8px;
+  font-size: 1.2rem;
+}
+
+.service-link:hover {
+  color: #2980b9;
+  transform: translateX(5px);
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    padding: 30px;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .service-card p {
     font-size: 1rem;
-    color: #666;
+  }
 }
 
-/* Media query for desktop screens */
-@media (min-width: 992px) {
-    .services-section .section-title {
-        text-align: center;
-    }
+/* Skill Item Colors */
+.skill-item:nth-child(1) { background-color: #f06734; color: #fff; }
+.skill-item:nth-child(2) { background-color: #3488f3; color: #fff; }
+.skill-item:nth-child(3) { background-color: #eec523; color: #fff; }
+.skill-item:nth-child(4) { background-color: #82e3be; color: #fff; }
+
+/* Particles.js Configuration */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
 }
 
-/* ... (rest of the CSS remains the same) ... */
+.particles-js-canvas-el {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.jumbotron-content {
+  position: relative;
+  z-index: 2;
+}
+
