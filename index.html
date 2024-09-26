@@ -9,13 +9,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
     
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     
     <link rel="shortcut icon" href="img/hav.jpg" type="image/x-icon" />
     
+    
+    
 </head>
 <body>
+
+    <div class="intro-container">
+        <div class="intro-content">
+            <h1 class="intro-title">
+                <span class="letter">W</span><span class="letter">e</span><span class="letter">l</span><span class="letter">c</span><span class="letter">o</span><span class="letter">m</span><span class="letter">e</span>
+                <span class="letter">T</span><span class="letter">o</span>
+                <span class="br-placeholder"></span>
+                <span class="letter">D</span><span class="letter">E</span><span class="letter">B</span><span class="letter">R</span><span class="letter">I</span><span class="letter">X</span><span class="letter">N</span><span class="letter">O</span><span class="letter">W</span>
+            </h1>
+            <p class="intro-subtitle">Crafting Digital Experiences</p>
+            <button class="intro-button">Explore Now</button>
+        </div>
+    </div>
 
 
 
@@ -66,23 +82,23 @@
         <div class="row about-content">
             <div class="col-lg-6 about-text-col">
                 <div class="about-text">
-                    <h2 class="about-title">About Me</h2>
-                    <p class="about-description">
+                    <h2 data-aos="fade-right" data-aos-anchor-placement="bottom-bottom"  class="about-title">About Me</h2>
+                    <p data-aos="fade-up" class="about-description">
 Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaScript. Saya antusias membuat antarmuka pengguna yang menarik dan responsif. Meski baru memulai, saya senang mengeksplorasi teknologi baru seperti Bootstrap dan React. Sebagai seorang introvert, saya menikmati coding dan selalu mencari cara untuk terus berkembang.</p>
-                    <p class="about-description">
+                    <p data-aos="fade-up" class="about-description">
                         Secangkir kopi adalah momen istirahat yang memicu ide-ide baru. Dalam setiap tegukan, kopi menemani pikiran mengembara, memunculkan inspirasi, dan membawa ketenangan dalam mencari solusi.
                     </p>
                     <ul class="skill-list">
-                        <li class="skill-item"><i class="fab fa-html5"></i> HTML5</li>
-                        <li class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</li>
-                        <li class="skill-item"><i class="fab fa-js"></i> JavaScript</li>
-                        <li class="skill-item"><i class="fas fa-paint-brush"></i> UI/UX Design</li>
+                        <li data-aos="flip-left" class="skill-item"><i class="fab fa-html5"></i> HTML5</li>
+                        <li data-aos="flip-left" class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</li>
+                        <li data-aos="flip-left" class="skill-item"><i data-aos="flip-left" class="fab fa-js"></i> JavaScript</li>
+                        <li data-aos="flip-left" class="skill-item"><i class="fas fa-paint-brush"></i> UI/UX Design</li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-6 about-image-col">
                 <div class="about-image">
-                    <img src="img/im.jpg" alt="John Doe" class="img-fluid rounded-circle">
+                    <img data-aos="zoom-in" src="img/im.jpg" alt="kael / debrixnow" class="img-fluid rounded-circle">
                 </div>
             </div>
         </div>
@@ -94,10 +110,10 @@ Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaSc
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="section-title">Our Services</h2>
+                <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"  class="section-title">Our Services</h2>
             </div>
         </div>
-        <div class="row">
+        <div data-aos="fade-right" class="row">
             <div class="col-md-6">
                 <div class="service-card">
                     <div class="service-icon">
@@ -108,7 +124,7 @@ Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaSc
                     <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div data-aos="fade-right" class="col-md-6">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-phone-alt"></i>
@@ -124,8 +140,8 @@ Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaSc
 
 <section id="contact" class="contact-section">
     <div class="container">
-        <h2 class="section-title">Contact Me</h2>
-        <div class="row">
+        <h2 data-aos="fade-up" class="section-title">Contact Me</h2>
+        <div data-aos="fade-right" class="row">
             <div class="col-md-6">
                 <form class="contact-form">
                     <div class="mb-3">
@@ -140,7 +156,7 @@ Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaSc
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
-            <div class="col-md-6">
+            <div data-aos="fade-right" class="col-md-6">
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
                     <p><i class="fas fa-map-marker-alt"></i>Indonesian Sulawesi Selatan</p>
@@ -159,7 +175,7 @@ Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaSc
 </section>
 
 <footer class="footer">
-    <div class="container">
+    <div data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" class="container">
         <div class="row">
             <div class="text-center">
                 <p>&copy; 2024 DEBRIXNOW. All rights reserved.</p>
@@ -353,7 +369,96 @@ particlesJS('particles-js', {
   
 </script>
       
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const introContainer = document.querySelector('.intro-container');
+            const mainContent = document.querySelector('.main-content');
+            const letters = document.querySelectorAll('.letter');
+            const subtitle = document.querySelector('.intro-subtitle');
+            const button = document.querySelector('.intro-button');
+
+            // Animate letters
+            letters.forEach((letter, index) => {
+                setTimeout(() => {
+                    letter.style.opacity = '1';
+                    letter.style.transform = 'translateY(0)';
+                }, 50 * index);
+            });
+
+            // Animate subtitle
+            setTimeout(() => {
+                subtitle.style.opacity = '1';
+                subtitle.style.transform = 'translateY(0)';
+            }, 1000);
+
+            // Animate button
+            setTimeout(() => {
+                button.style.opacity = '1';
+                button.style.transform = 'translateY(0)';
+            }, 1500);
+
+            // Handle button click
+            button.addEventListener('click', () => {
+                introContainer.style.opacity = '0';
+                setTimeout(() => {
+                    introContainer.style.display = 'none';
+                    mainContent.classList.add('visible');
+                }, 1000);
+            });
+
+            // Auto-hide intro after 5 seconds (adjust as needed)
+            setTimeout(() => {
+                if (introContainer.style.opacity !== '0') {
+                    introContainer.style.opacity = '0';
+                    setTimeout(() => {
+                        introContainer.style.display = 'none';
+                        mainContent.classList.add('visible');
+                    }, 1000);
+                }
+            }, 5000);
+        });
+    </script>
       
+      <script>
+        function handleResize() {
+    const placeholders = document.querySelectorAll('.br-placeholder');
+    
+    if (window.innerWidth <= 768) {
+        // Mobile: tambahkan <br> jika tidak ada
+        placeholders.forEach(placeholder => {
+            if (!placeholder.querySelector('br')) {
+                const br = document.createElement('br');
+                placeholder.appendChild(br);
+            }
+        });
+    } else {
+        // Desktop: hapus <br> jika ada
+        placeholders.forEach(placeholder => {
+            const br = placeholder.querySelector('br');
+            if (br) {
+                placeholder.removeChild(br);
+            }
+        });
+    }
+}
+
+// Panggil saat halaman dimuat
+handleResize();
+
+// Dengarkan perubahan ukuran layar
+window.addEventListener('resize', handleResize);
+      </script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  
+  AOS.init({
+    once: true
+  });
+  
+</script>
+
 
 </body>
     </html>
