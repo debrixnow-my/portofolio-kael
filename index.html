@@ -57,6 +57,9 @@
                     <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#randomplay">Random Play</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#services">Services</a>
                 </li>
                 <li class="nav-item">
@@ -75,7 +78,8 @@
             <p class="jumbotron-subtitle">
                 <span id="typed-text"></span>
             </p>
-            <button class="jumbotron-btn">Explore Now</button>
+            <a class="explore" href="#about">            <button class="jumbotron-btn">Explore Now</button>
+</a>
         </div>
     </div>
 </div>
@@ -108,6 +112,48 @@ Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaSc
     </div>
 </section>
 
+<!-- Gabut Mania Section -->
+<section id="randomplay" class="gabut-mania-section">
+    <div class="container">
+        <h2 class="section-titleku" data-aos="fade-up">Random Play</h2>
+        <p class="section-subtitleku" data-aos="fade-up" data-aos-delay="200">Explore my world of fun and quirky side projects!</p>
+        
+        <div class="row gabut-projects">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                <div class="gabut-card">
+                    <div class="gabut-icon">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3>Shopping Calculator</h3>
+                    <p>A practical web to quickly calculate shopping.</p>
+                    <a href="cal-mart.html" target="_blank" class="gabut-link">visit now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="gabut-card">
+                    <div class="gabut-icon">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3>Time Calculator</h3>
+                    <p>An interactive web calculates life time dynamically, responsively, informatively, and provides visual inspiration.</p>
+                    <a href="time-cal.html" target="_blank" class="gabut-link">try now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="500">
+                <div class="gabut-card">
+                    <div class="gabut-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Emoji Puzzle Game</h3>
+                    <p>Solve puzzles using only emojis. How far can you go?</p>
+                    <a href="puzzle.html" target="_blank" class="gabut-link">play game <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section id="services" class="services-section">
     <div class="container">
@@ -116,7 +162,7 @@ Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaSc
                 <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"  class="section-title">Our Services</h2>
             </div>
         </div>
-        <div data-aos-duration="1000" data-aos="fade-up-right" class="row">
+        <div data-aos="zoom-in" data-aos-delay="400" class="row">
             <div class="col-md-6">
                 <div class="service-card">
                     <div class="service-icon">
@@ -127,7 +173,7 @@ Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaSc
                     <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div data-aos-duration="1500" data-aos="fade-up-right" class="col-md-6">
+            <div data-aos="zoom-in" data-aos-delay="500" class="col-md-6">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-phone-alt"></i>
@@ -266,7 +312,7 @@ Saya adalah Front-End Developer pemula yang sedang belajar HTML, CSS, dan JavaSc
 particlesJS('particles-js', {
   "particles": {
     "number": {
-      "value": 100,
+      "value": 50,  // Dikurangi dari 100 menjadi 50
       "density": {
         "enable": true,
         "value_area": 800
@@ -276,33 +322,24 @@ particlesJS('particles-js', {
       "value": ["#3498db", "#2ecc71", "#9b59b6", "#f1c40f"]
     },
     "shape": {
-      "type": ["circle", "triangle", "polygon"],
+      "type": "circle",  // Hanya menggunakan bentuk lingkaran untuk efisiensi
       "stroke": {
         "width": 0,
         "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
       }
     },
     "opacity": {
-      "value": 0.6,
+      "value": 0.5,
       "random": false,
       "anim": {
-        "enable": true,
-        "speed": 2,
-        "opacity_min": 0.1,
-        "sync": false
+        "enable": false  // Menonaktifkan animasi opacity
       }
     },
     "size": {
-      "value": 8,
+      "value": 5,  // Ukuran partikel dikurangi
       "random": true,
       "anim": {
-        "enable": true,
-        "speed": 10,
-        "size_min": 0.1,
-        "sync": false
+        "enable": false  // Menonaktifkan animasi ukuran
       }
     },
     "line_linked": {
@@ -314,16 +351,14 @@ particlesJS('particles-js', {
     },
     "move": {
       "enable": true,
-      "speed": 5,
+      "speed": 3,  // Kecepatan dikurangi
       "direction": "none",
-      "random": true,
+      "random": false,
       "straight": false,
       "out_mode": "out",
       "bounce": false,
       "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
+        "enable": false
       }
     }
   },
@@ -335,38 +370,18 @@ particlesJS('particles-js', {
         "mode": "repulse"
       },
       "onclick": {
-        "enable": true,
-        "mode": "push"
+        "enable": false  // Menonaktifkan interaksi klik
       },
       "resize": true
     },
     "modes": {
-      "grab": {
-        "distance": 400,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
       "repulse": {
-        "distance": 200,
+        "distance": 100,  // Jarak repulse dikurangi
         "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
       }
     }
   },
-  "retina_detect": true
+  "retina_detect": false  // Menonaktifkan deteksi retina untuk performa lebih baik
 });
 });
   
@@ -466,4 +481,4 @@ window.addEventListener('resize', handleResize);
 
 
 </body>
-                    </html>
+</html>
