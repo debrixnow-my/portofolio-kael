@@ -209,12 +209,18 @@
         }
 
         function checkWin() {
-            if (document.querySelectorAll('.tile.matched').length === tiles.length) {
-                setTimeout(() => {
-                    alert(`Congratulations! You won in ${moves} moves!`);
-                    newGame();
-                }, 500);
-            }
+    if (document.querySelectorAll('.tile.matched').length === tiles.length) {
+        setTimeout(() => {
+            Swal.fire({
+                title: 'Congratulations!',
+                text: `You won in ${moves} moves!`,
+                icon: 'success',
+                confirmButtonText: 'Play Again'
+            }).then(() => {
+                newGame();
+            });
+        }, 500);
+    }
         }
 
         function newGame() {
@@ -225,5 +231,7 @@
 
         newGame();
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
