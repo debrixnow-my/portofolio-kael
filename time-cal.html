@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Usia Modern</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <!-- Tambahkan SweetAlert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Usia</h1>
+        <div class="input-group">
+            <label for="birthdate">Tanggal Lahir:</label>
+            <div class="date-input-wrapper">
+                <input type="date" id="birthdate" required>
+            </div>
+        </div>
+        <button class="calculate-btn" onclick="calculateAge()">Hitung Usia</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateAge() {
+            const birthdate = new Date(document.getElementById('birthdate').value);
+            const now = new Date();
+            const ageInMilliseconds = now - birthdate;
+
+            if (isNaN(ageInMilliseconds)) {
+                // Ubah alert menjadi SweetAlert
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Mohon masukkan tanggal lahir yang valid!',
+                });
+                return;
+            }
+
+            const ageDate = new Date(ageInMilliseconds);
+            const years = Math.abs(ageDate.getUTCFullYear() - 1970);
+            const months = ageDate.getUTCMonth();
+            const days = ageDate.getUTCDate() - 1;
+            const hours = ageDate.getUTCHours();
+            const minutes = ageDate.getUTCMinutes();
+            const seconds = ageDate.getUTCSeconds();
+
+            const resultHTML = `
+                <h2>Anda telah hidup selama:</h2>
+                <div class="age-box">
+                    <div class="age-item">
+                        <div class="age-value">${years}</div>
+                        <div class="age-label">Tahun</div>
+                    </div>
+                    <div class="age-item">
+                        <div class="age-value">${months}</div>
+                        <div class="age-label">Bulan</div>
+                    </div>
+                    <div class="age-item">
+                        <div class="age-value">${days}</div>
+                        <div class="age-label">Hari</div>
+                    </div>
+                    <div class="age-item">
+                        <div class="age-value">${hours}</div>
+                        <div class="age-label">Jam</div>
+                    </div>
+                    <div class="age-item">
+                        <div class="age-value">${minutes}</div>
+                        <div class="age-label">Menit</div>
+                    </div>
+                    <div class="age-item">
+                        <div class="age-value">${seconds}</div>
+                        <div class="age-label">Detik</div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('result').innerHTML = resultHTML;
+
+            // Update setiap detik
+            setInterval(() => {
+                const newNow = new Date();
+                const newAgeInMilliseconds = newNow - birthdate;
+                const newAgeDate = new Date(newAgeInMilliseconds);
+                
+                document.querySelector('.age-item:nth-child(6) .age-value').textContent = newAgeDate.getUTCSeconds();
+                document.querySelector('.age-item:nth-child(5) .age-value').textContent = newAgeDate.getUTCMinutes();
+                document.querySelector('.age-item:nth-child(4) .age-value').textContent = newAgeDate.getUTCHours();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
