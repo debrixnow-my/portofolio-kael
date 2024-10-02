@@ -152,11 +152,11 @@
         </div>
         <div class="input-group">
             <label for="itemPrice">Harga (Rp):</label>
-            <input type="text" id="itemPrice" placeholder="Masukkan harga" oninput="formatCurrency(this)">
+            <input type="text" id="itemPrice" placeholder="Masukkan harga" oninput="formatPrice(this)" onblur="completePrice(this)">
         </div>
         <div class="input-group">
             <label for="itemQuantity">Jumlah:</label>
-            <input type="number" id="itemQuantity" placeholder="Masukkan jumlah barang" min="1">
+            <input type="text" id="itemQuantity" placeholder="Masukkan jumlah barang" oninput="formatQuantity(this)">
         </div>
         <button onclick="addItem()">Tambah Barang</button>
         <div id="itemList"></div>
@@ -166,19 +166,30 @@
     <script>
         let items = [];
 
-        function formatCurrency(input) {
+        function formatPrice(input) {
             let value = input.value.replace(/\D/g, '');
-            value = (parseInt(value) || 0).toString();
-            value = value.padEnd(3, '0');
-            value = `Rp ${parseInt(value).toLocaleString('id-ID')}`;
-            input.value = value;
+            input.value = value ? `Rp ${parseInt(value).toLocaleString('id-ID')}` : '';
+        }
+
+        function completePrice(input) {
+            let value = input.value.replace(/\D/g, '');
+            if (value) {
+                value = value.padEnd(3, '0');
+                input.value = `Rp ${parseInt(value).toLocaleString('id-ID')}`;
+            }
+        }
+
+        function formatQuantity(input) {
+            let value = input.value.replace(/\D/g, '');
+            input.value = value ? parseInt(value).toLocaleString('id-ID') : '';
         }
 
         function addItem() {
             const name = document.getElementById('itemName').value;
             const priceInput = document.getElementById('itemPrice').value;
             const price = parseInt(priceInput.replace(/\D/g, '')) || 0;
-            const quantity = parseInt(document.getElementById('itemQuantity').value) || 0;
+            const quantityInput = document.getElementById('itemQuantity').value;
+            const quantity = parseInt(quantityInput.replace(/\D/g, '')) || 0;
 
             if (name && price && quantity) {
                 items.push({ name, price, quantity });
@@ -197,7 +208,7 @@
                 const itemElement = document.createElement('div');
                 itemElement.classList.add('item');
                 itemElement.innerHTML = `
-                    <span>${item.name} - Rp ${item.price.toLocaleString('id-ID')} x ${item.quantity}</span>
+                    <span>${item.name} - Rp ${item.price.toLocaleString('id-ID')} x ${item.quantity.toLocaleString('id-ID')}</span>
                     <span>
                         Rp ${(item.price * item.quantity).toLocaleString('id-ID')}
                         <button onclick="removeItem(${index})">Hapus</button>
