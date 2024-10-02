@@ -4,59 +4,6 @@ body, html {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Navbar Styles */
-.navbar {
-    padding: 1rem 0;
-    transition: all 0.3s ease;
-}
-.navbar.scrolled {
-    background-color: rgba(26, 26, 46, 0.9) !important;
-    backdrop-filter: blur(10px);
-    padding: 0.5rem 0;
-}
-.navbar-brand {
-    font-weight: 700;
-    font-size: 1.8rem;
-    background: linear-gradient(45deg, #3498db, #2ecc71);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease;
-}
-.navbar-nav .nav-link {
-    font-weight: 500;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    margin: 0 0.25rem;
-    transition: all 0.3s ease;
-    position: relative;
-}
-.navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #3498db;
-    transition: width 0.3s ease;
-}
-.navbar-nav .nav-link:hover::after {
-    width: 100%;
-}
-.navbar-nav .nav-link.active {
-    color: #3498db;
-}
-.navbar-toggler {
-    border: none;
-    padding: 0.25rem 0.75rem;
-}
-.navbar-toggler:focus {
-    box-shadow: none;
-}
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
 /* Jumbotron Styles */
 .jumbotron-container {
     height: 100vh;
@@ -88,7 +35,7 @@ body, html {
     padding: 0.75rem 2.5rem;
     font-size: 1.2rem;
     color: #fff;
-    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    background: linear-gradient(45deg, #dfe925, #47e3d6);
     border: none;
     border-radius: 50px;
     transition: all 0.3s ease;
@@ -336,7 +283,8 @@ body, html {
 }
 .social-links a:hover {
     color: #3498db;
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(1.1);
+    
 }
 
 /* Footer Styles */
@@ -422,7 +370,7 @@ body, html {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #3498db;
+    background-color: #34dbb8;
     transition: width 0.3s ease;
 }
 
@@ -771,7 +719,7 @@ body, html {
 .intro-button {
     padding: 12px 24px;
     font-size: 1rem;
-    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    background: linear-gradient(45deg, #dfe925, #47e3d6);
     color: #ffffff;
     border: none;
     border-radius: 50px;
@@ -844,3 +792,144 @@ body, html {
         font-size: 0.9rem;
     }
 }
+
+
+/* Existing styles... */
+
+/* Gabut Mania Section Styles */
+.gabut-mania-section {
+    padding: 100px 0;
+    background-image: url('https://i.ibb.co.com/f1dLHgp/random.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.gabut-mania-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);  /* This creates a dark overlay */
+}
+
+.gabut-mania-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.section-subtitleku {
+    color: #ffffff;
+    
+    text-align: center;
+}
+
+.gabut-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(5px);
+}
+
+.gabut-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.gabut-icon {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.gabut-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+}
+
+.gabut-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.gabut-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #3498db;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.gabut-link i {
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+
+.gabut-link:hover {
+    color: #2980b9;
+    transform: translateX(5px);
+}
+
+@media (max-width: 767px) {
+    .gabut-projects .col-md-4 {
+        margin-bottom: 30px;
+    }
+    
+    .gabut-card {
+        height: auto;
+        margin-bottom: 0;
+    }
+    
+    .gabut-mania-section {
+        padding: 60px 0;
+    }
+    
+    .gabut-projects {
+        margin-top: -15px;
+        margin-bottom: -15px;
+    }
+    
+    .gabut-projects .col-md-4 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.section-titleku {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #eaeaea;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.section-titleku::after {
+  content: '';
+    position: absolute;
+    left: 50%;
+        transform: translateX(-50%);
+    bottom: -10px;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+}
+
+
+/* Rest of the existing styles... */
